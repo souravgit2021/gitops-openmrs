@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: openmrsapp
-        image: docsourav1992/open_mrs:1.0.0-1
+        image: docsourav1992/open_mrs:1.0.0-3
         ports:
           - containerPort: 8080
         imagePullPolicy: IfNotPresent
