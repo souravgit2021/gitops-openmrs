@@ -1,0 +1,21 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: openmrsapp
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      run: openmrsapp
+  template:
+    metadata:
+      labels:
+        run: openmrsapp
+    spec:
+      containers:
+      - name: openmrsapp
+        image: docsourav1992/open_mrs:1.0.0-1
+        ports:
+          - containerPort: 8080
+        imagePullPolicy: IfNotPresent
